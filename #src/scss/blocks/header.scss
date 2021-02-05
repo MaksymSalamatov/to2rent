@@ -1,0 +1,139 @@
+.header{
+  &_logo{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 40px 0;
+    &__wrap{
+      max-width: 384px;
+      img{
+        @media (max-width: 576px){
+          width: 250px;
+        }
+      }
+      p{
+        font-family: 'PT Serif', serif;
+        color: $main-text;
+        @include fonts(24px, 31px, 400);
+        margin-top: -10px;
+        text-align: right;
+
+        @media (max-width: 576px){
+          @include fonts(14px, 10px, 400);
+        }
+      }
+    }
+  }
+
+  .hr{
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: -22px;
+  }
+
+  &_nav{
+    margin-top: 20px;
+    
+
+    .burger{
+      display: none;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      margin: 20px;
+      &-item{
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        left: 0;
+        background-color: #000;
+        transition: all .3s ease;
+
+        &:nth-child(2){
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:nth-child(3){
+          bottom: 0;
+        }
+      }
+
+      @media (max-width:799px){
+        display: block;
+      }
+
+
+      &.show{
+        z-index: 100;
+        .burger-item{
+              &:nth-child(1){
+                  transform: rotate(45deg);
+                  transform-origin: left;
+                  width: 50px;
+              }
+              &:nth-child(2){
+                  opacity: 0;
+              }
+              &:nth-child(3){
+                  width: 50px;
+                  transform: rotate(-45deg);
+                  transform-origin: left;
+              }
+          } 
+      }     
+  }
+
+    .wrapper{
+      margin: 0 auto;
+      width: 80%;
+      @include flex(center, space-between);
+
+      @media (max-width:992px){
+          width: 100%;
+          @include flex(center, space-around);
+      }
+      @media (max-width: 799px){
+          position: absolute;
+          flex-direction: column;
+          left: 0;
+          top: 50px;
+          background-color: #fff;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-100%);
+          transition: all .5s ease;
+      }
+
+      &.show{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+        margin-top: 70px;
+        height: 80vh;
+        z-index: 50;
+      }
+
+      @include flex(center, center);
+
+      :hover{
+        background-color: $second-text;
+        color: $third-text
+      }
+      &__links{
+        width: 300px;
+        height: 100px;
+        border: 1px solid $help-color;
+        @include fonts(24px, 28px, 400);
+        color: $main-text;
+        transition: 1s ease;
+        
+        a{
+          display: block;
+          height: 100%;
+          @include flex(center, center);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.why{
+    padding: 50px 0;
+    @include fonts(18px, 24px, 400);
+    @media (max-width: 992px){
+        padding: 100px 0;
+    }
+    @media (max-width: 799px){
+        padding: 40px 0;
+    }
+    &_wrap{
+        @include flex(center, space-around);
+        padding: 10px 0;
+        
+        img{
+            margin-right: 33px;
+
+            @media (max-width: 992px){
+            margin-right: 25px;
+            }
+            @media (max-width: 799px){
+                margin-right: 10px;
+            }
+        }
+        @media (max-width: 799px){
+            flex-wrap: wrap;
+            margin: 10px 30px;
+        }
+    }
+    &_time, &_best{
+        margin-right: 113px;
+
+        @media (max-width: 1400px){
+            margin-right: 60px;
+        }
+        @media (max-width: 992px){
+            margin-right: 40px;
+        }
+        @media (max-width: 799px){
+            margin: 10px;
+        }
+        
+        &__title{
+            @include flex(center, center);
+            @include fonts(36px, 36px, 400);
+            font-family: 'PT Serif', serif;
+            margin-bottom: 20px;
+            img{
+                @media (max-width: 1400px){
+                    @include fonts(20px, 20px, 400);
+                }
+                @media (max-width: 799px){
+                    @include flex(center, flex-start);
+                    height: 70px;
+                }
+            }
+            h3{
+                @media (max-width: 576px){
+                    width: auto;
+                }
+            }
+
+            @media (max-width: 1400px){
+                @include fonts(24px, 24px, 600);
+            }
+            @media (max-width: 992px){
+                @include fonts(22px, 22px, 600);
+            }
+            @media (max-width: 799px){
+                @include fonts(20px, 16px, 600);
+                @include flex(center, space-around);
+                height: 90px;
+            }
+            @media (max-width: 576px){
+                text-align: center;
+                @include fonts(18px, 18px, 600);
+                @include flex(center, flex-start);
+            }
+            p{
+                margin-bottom: 40px;
+
+                @media (max-width: 799px){
+                    @include fonts(16px, 16px, 400);
+                }
+            }
+        }
+    }
+    &_time__title-info, &_best__title-info{
+        @include flex(center, flex-start);
+        margin: 15px auto;
+        img{
+            margin-right: 10px;
+        }
+        a{
+            text-decoration: underline;
+            color: $main-text;
+        }
+        @media (max-width: 576px){
+            margin-top: 15px;
+        }
+    }
+}

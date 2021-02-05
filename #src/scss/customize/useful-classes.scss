@@ -1,0 +1,35 @@
+@import '../basik/variables';
+@import '../basik/mixins';
+
+.img-fluid {
+  height: auto;
+  max-width: 100%;
+}
+
+.stop-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+

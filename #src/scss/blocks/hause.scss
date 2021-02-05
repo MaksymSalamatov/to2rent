@@ -1,0 +1,44 @@
+.hause{
+    background-image: url(../../img/house/house.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    padding-top: 50px;
+
+    &_block{
+        margin-left: auto;
+        text-align: right;
+        max-width: 370px;
+        
+        &__text{
+            @include fonts(48px, 48px, 400);
+            color: $third-text;
+            font-family: 'PT Serif', serif;
+            margin-bottom: 14px;
+        }
+        
+        a{
+            display: block;
+            background-color: #000;
+            color: #ffffff;
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            line-height: 50px;
+            margin: 0 auto;
+            transition: all .3s ease;
+            text-align: center;
+
+            &:hover{
+                transform: scale(1.05);
+                background-color: #E1BF9A;
+                color: #000;
+            }
+        }
+    }
+}
+
+
