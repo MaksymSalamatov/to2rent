@@ -7,5 +7,5 @@ const body = document.querySelector('body');
 burger.addEventListener('click', () => {
   menu.classList.toggle('show');
   burger.classList.toggle('show');
-  body.classList.toggle('no-scroll');
+  body.classList.toggle('stop-scroll');
 })

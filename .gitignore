@@ -1,5 +1,8 @@
-errors.txt
-package-lock.json
+<<<<<<< HEAD
+=======
+gulperrors.txt
 /logs
-/node_modules
-/to2rent
+node_modules/
+to2rent/
+package-lock.json
+>>>>>>> 0508ebc32fdbecf9a1c7c0834df0ab1d91dd4056
