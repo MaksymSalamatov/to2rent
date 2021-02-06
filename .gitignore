@@ -1,2 +1,5 @@
 errors.txt
+package-lock.json
 /logs
+/node_modules
+/to2rent

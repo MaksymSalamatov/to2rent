@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fls-gulp.iml" filepath="$PROJECT_DIR$/.idea/fls-gulp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/to2rent.iml" filepath="$PROJECT_DIR$/.idea/to2rent.iml" />
     </modules>
   </component>
 </project>
